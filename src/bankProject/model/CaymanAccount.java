@@ -1,4 +1,4 @@
-package org.generation.italy.bank.model;
+package bankProject.model;
 import java.time.LocalDate;
 public class CaymanAccount extends Account { //figlia di account
     private String secretCode;

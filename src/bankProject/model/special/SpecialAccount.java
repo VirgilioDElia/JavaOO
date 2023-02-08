@@ -1,6 +1,6 @@
-package org.generation.italy.bank.model.special;
-import org.generation.italy.bank.model.Account;
-import org.generation.italy.bank.model.Client;
+package bankProject.model.special;
+import bankProject.model.Account;
+import bankProject.model.Client;
 import java.time.LocalDate;
 
 public class SpecialAccount extends Account{

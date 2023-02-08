@@ -1,11 +1,7 @@
-package org.generation.italy.bank.infrastructure;
+package bankProject.infrastructure;
 
-import org.generation.italy.bank.model.Account;
-import org.generation.italy.bank.model.CaymanAccount;
-import org.generation.italy.bank.model.Client;
-import org.generation.italy.bank.model.special.SpecialAccount;
-import java.time.LocalDate;
-import java.util.Date;
+import bankProject.model.Account;
+import bankProject.model.CaymanAccount;
 
 public class ApplicationStart {
     public static void main(String[] args) {
