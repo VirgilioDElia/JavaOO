@@ -1,12 +1,58 @@
-package bank.model;
+package org.generation.italy.bank.model;
+
 import java.time.LocalDate;
 public class Account {
-    public double balance; //saldo
-    public LocalDate openDate;
-    public String client;   //stringa del clinrte
+    protected double balance; //saldo
+    private LocalDate openDate; //se io lo metto = null il compilatore mi dice che è rindondante perchè è gia null
+    private String client;   //stringa del clinrte
+
+    public Account() {   //costruttore di default , che non ha parametri
+     this(1000,LocalDate.now(),"Anonymous");
+        /*
+        balance = 1000;   //creo cosrtuttore di default di
+        openDate = LocalDate.now();
+        client = "Anonymous";
+        */
+    }
+
+    //costruttori in OVERLOAD
+    public Account(double b,LocalDate ld,String cname) {
+        balance = b; //mi viebne passato un valore di b ed io lo assegno a balance
+        openDate = ld;
+        client = cname;
+    }
+
+    public Account(double c,LocalDate locD){
+        this(c,locD,"Anonymous"); //richiama il costruttore in line 15 che setta tutte le variabili
+        //balance = c;
+        //openDate = locD;
+        //client = "Anonymous";
+    }
+    //INCAPSULATION, INCAPSULAMENTO che comprende metodo getter e setter
+    public double getBalance(){  //metodo getter che richiama la funzione privata
+        //return balance;
+        return balance/100;       //con questo metodo posso modificalo con semplicità
+    }
+    public void setBalance(double amount){  //metodo setter che modifica la funzione privata
+        //this.balance = amount;
+        if(amount >= 0) {                    //evito i valori negativi
+            this.balance = amount * 100;
+        }
+    }
+    public LocalDate getOpenDate(){
+        return openDate;
+    }
+    public String getClient(){
+        return client;
+    }
+    public void setClient(String c){
+        client = c;
+    }
+
     public double deposit(double amount){  //amount è il deposito
+        //amount *=100;
         balance += amount;  //sommiamo a balance l'amount
-        return balance;
+        return balance/100;   //sto cambiando l'unità di misura da euro a centesimi di euro
 
     }
 
