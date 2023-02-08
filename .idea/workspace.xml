@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0a4b040-d28a-437f-b9b3-07868b34cc9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/infrastructure/ApplicationStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/special/SpecialAccount.java" afterDir="false" />
+    <list default="true" id="e0a4b040-d28a-437f-b9b3-07868b34cc9d" name="Changes" comment="add client class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/ApplicationStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/infrastructure/ApplicationStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/infrastructure/ApplicationStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/model/CaymanAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/CaymanAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/generation/italy/bank/model/special/SpecialAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/generation/italy/bank/model/special/SpecialAccount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,29 @@
       <option name="presentableId" value="Default" />
       <updated>1675761798975</updated>
     </task>
+    <task id="LOCAL-00001" summary="add client class">
+      <created>1675874015103</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675874015103</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add client class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client class" />
   </component>
 </project>

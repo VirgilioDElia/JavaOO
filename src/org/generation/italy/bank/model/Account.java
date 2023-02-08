@@ -4,10 +4,10 @@ import java.time.LocalDate;
 public class Account {
     protected double balance; //saldo
     private LocalDate openDate; //se io lo metto = null il compilatore mi dice che è rindondante perchè è gia null
-    private String client;   //stringa del clinrte
-
+    //private String client;   //stringa del clinrte
+    private Client client;
     public Account() {   //costruttore di default , che non ha parametri
-     this(1000,LocalDate.now(),"Anonymous");
+     //this(1000,LocalDate.now());
         /*
         balance = 1000;   //creo cosrtuttore di default di
         openDate = LocalDate.now();
@@ -16,18 +16,19 @@ public class Account {
     }
 
     //costruttori in OVERLOAD
-    public Account(double b,LocalDate ld,String cname) {
+    public Account(double b,LocalDate ld,Client client) {
         balance = b; //mi viebne passato un valore di b ed io lo assegno a balance
         openDate = ld;
-        client = cname;
+        this.client = client;
     }
 
-    public Account(double c,LocalDate locD){
+   /*public Account(double c,LocalDate locD){
         this(c,locD,"Anonymous"); //richiama il costruttore in line 15 che setta tutte le variabili
         //balance = c;
         //openDate = locD;
         //client = "Anonymous";
     }
+    */
     //INCAPSULATION, INCAPSULAMENTO che comprende metodo getter e setter
     public double getBalance(){  //metodo getter che richiama la funzione privata
         //return balance;
@@ -42,11 +43,11 @@ public class Account {
     public LocalDate getOpenDate(){
         return openDate;
     }
-    public String getClient(){
+    public Client getClient(){
         return client;
     }
-    public void setClient(String c){
-        client = c;
+    public void setClient(Client client){
+        this.client = client;
     }
 
     public double deposit(double amount){  //amount è il deposito

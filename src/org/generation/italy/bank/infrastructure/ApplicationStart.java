@@ -2,6 +2,7 @@ package org.generation.italy.bank.infrastructure;
 
 import org.generation.italy.bank.model.Account;
 import org.generation.italy.bank.model.CaymanAccount;
+import org.generation.italy.bank.model.Client;
 import org.generation.italy.bank.model.special.SpecialAccount;
 import java.time.LocalDate;
 import java.util.Date;
@@ -26,8 +27,8 @@ public class ApplicationStart {
         //il metodo deposita aggiunge il deposito a balance quindi amnche se chiamo newbalance lui comunque o aggiunge al balnce
         //System.out.println(x.balance);
         //stampa 1000
-        Account a2 = new Account (2500, LocalDate.of(2023,1,20),"Piero Rossi");
-        SpecialAccount sa1 = new SpecialAccount (100_000.0, LocalDate.now(), "Richie Rich");
+       // Account a2 = new Account (2500, LocalDate.of(2023,1,20),"Piero Rossi");
+        //SpecialAccount sa1 = new SpecialAccount (100_000.0, LocalDate.now(), "Richie Rich");
         //SpecialAccount sa2 = new String ("SpecialAccount");
         //sa2.setBalance(1000);
         // i metodi che il comp ti fa chiamare nella ...
@@ -39,7 +40,7 @@ public class ApplicationStart {
         ca.evadeTax();
         //SpecialAccount sa2 = new String("SpecialAccount");  //stiampo usando il telecomando di un televisore per far dunzionare un alavatrice
         //SpecialAccount sa2 =  new Account (2500, LocalDate.of(2023,1,20),"Piero Rossi"); //oggetti diersi e imparentati ma non sono dello stesso tipo
-        Account a3 = new SpecialAccount (100_000.0, LocalDate.now(), "Richie Rich"); //special account è un account speciale ma è anche un Account
+        //Account a3 = new SpecialAccount (100_000.0, LocalDate.now(), "Richie Rich"); //special account è un account speciale ma è anche un Account
         // special account essendo figlia ha tutti i metodi della madre (una reference madre può puntare ad una qualsiasi delle figlie perchè hanno tutti i metodi);
         //la classe figlia è equivalente ad una classe madre ; ma la madre non è equivalente alla figlia quindi la figlia non può puntare la madre perchè la madre non ha tutti i metodi della figlia
         Account[] acs = new Account[10]; //questo array può puntare a tutte le figlie
@@ -52,10 +53,12 @@ public class ApplicationStart {
             }
         }
     }
-    public static void handleAccount(Account x){  //utilizzando il METODO POLIMORFICO , non ha bisgono di sapere con quale account lavora
-        String clientName = x.getClient();
-        if(clientName!=null && clientName.length() > 10 && clientName.startsWith("sa")) {
+   /* public static void handleAccount(Account x){  //utilizzando il METODO POLIMORFICO , non ha bisgono di sapere con quale account lavora
+        Client client = x.getClient();
+        if(client!=null && client.length() > 10 && client.startsWith("sa")) {
             x.deposit(10);
         }
     }
+    */
+
 }

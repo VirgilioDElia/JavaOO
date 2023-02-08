@@ -10,9 +10,10 @@ public class Client {
     private String lastName;
     private LocalDate birthdate;
     private char sex;
-    public String getFullName(){
+    /*public String getFullName(){
         return "name+ " " +lastName";
     }
+    */
     public String getFullNameSB(){
         StringBuilder sb = new StringBuilder(name).append(" ").append(lastName); // metodo chaining ... e ritorna lo stringbuilder
        //sb.append(" ");

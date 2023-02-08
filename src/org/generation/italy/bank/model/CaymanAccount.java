@@ -5,8 +5,8 @@ public class CaymanAccount extends Account { //figlia di account
     public CaymanAccount(){
         super();  //invoca il costruttore di default della mamma
     }
-    public CaymanAccount(double balance, LocalDate openDate,String clientName,String secretCode){
-        super(balance, openDate, clientName); //va fatto come prima cosa per settare la parte madre
+    public CaymanAccount(double balance, LocalDate openDate,Client client,String secretCode){
+        super(balance, openDate, client); //va fatto come prima cosa per settare la parte madre
         this.secretCode = secretCode;  //va settata la parte figlia, uil this serve per non creare ambiguità tra le due variabili secret code con lo stesso nome
     }
     public double evadeTax() {
