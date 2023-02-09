@@ -2,12 +2,14 @@ package bankProject.infrastructure;
 
 import bankProject.model.Account;
 import bankProject.model.CaymanAccount;
+import bankProject.model.Client;
+
 
 public class ApplicationStart {
     public static void main(String[] args) {
 
-        Account a1 = new Account();
-        Account x = new Account();
+        //Account a1 = new Account();
+        //Account x = new Account();
 
         //sta invocando il costruttore della classe account che ritorna l'indirizzo assegnato ad x
 
@@ -18,7 +20,7 @@ public class ApplicationStart {
         //System.out.println(x.client);
         //System.out.println(x.openDate);
         //stamperà null perchè è un reference type che ha di default null
-        double newBalance = x.deposit(1000.0);
+        //double newBalance = x.deposit(1000.0);
         //sto chiamando il metodo deposita , x.deposita vuol dire esegui il metodso deposita sull'oggetto,
         //il metodo deposita aggiunge il deposito a balance quindi amnche se chiamo newbalance lui comunque o aggiunge al balnce
         //System.out.println(x.balance);
@@ -31,7 +33,7 @@ public class ApplicationStart {
         CaymanAccount ca = new CaymanAccount();
         //System.out.println(ca.balance);
         System.out.println(ca.getBalance());  //tramite metodo getter posso chamare la fuzione balance che eraa privata
-        a1.setBalance(1000);  //tramite metodo setter posso modificare la variabile privata
+        //a1.setBalance(1000);  //tramite metodo setter posso modificare la variabile privata
         ca.deposit(10_000);
         ca.evadeTax();
         //SpecialAccount sa2 = new String("SpecialAccount");  //stiampo usando il telecomando di un televisore per far dunzionare un alavatrice
@@ -40,6 +42,17 @@ public class ApplicationStart {
         // special account essendo figlia ha tutti i metodi della madre (una reference madre può puntare ad una qualsiasi delle figlie perchè hanno tutti i metodi);
         //la classe figlia è equivalente ad una classe madre ; ma la madre non è equivalente alla figlia quindi la figlia non può puntare la madre perchè la madre non ha tutti i metodi della figlia
         Account[] acs = new Account[10]; //questo array può puntare a tutte le figlie
+        Account x4 = new CaymanAccount();
+        if (x4 instanceof CaymanAccount){
+            CaymanAccount y = (CaymanAccount) x4;   //down caster
+               y.evadeTax();
+        }
+        CaymanAccount x1 = new CaymanAccount(); //eseguirà il deposit di cayman occount
+        x1.deposit(1000);
+        //Account x2 = new Account();  //seguirò il deposit di account
+        //x2.deposit(1000);
+        Account x3 = new CaymanAccount(); //reference madre ogg puntato figlia
+        x3.deposit(1000);  //chiamerà il deposit definito nella figlia perchè l'oggetto è definito nella figlia
     }
 
     public static void handleAccount(Account[] acs){ //questo metodo lavora con tutte le figlie considerandole account senza considerare i tipi e funzionerà con tutti gli account che creeremo favoredno l'estensibilità
@@ -49,12 +62,11 @@ public class ApplicationStart {
             }
         }
     }
-   /* public static void handleAccount(Account x){  //utilizzando il METODO POLIMORFICO , non ha bisgono di sapere con quale account lavora
-        Client client = x.getClient();
-        if(client!=null && client.length() > 10 && client.startsWith("sa")) {
+    /*public static void handleAccount(Account x){  //utilizzando il METODO POLIMORFICO , non ha bisgono di sapere con quale account lavora
+        client = x.getClient().getFullName();
+        if(client!=null && clientName.length() > 10 && client.startsWith("sa")) {
             x.deposit(10);
         }
-    }
-    */
+    }*/
 
 }

@@ -1,7 +1,7 @@
 package bankProject.model;
 
 import java.time.LocalDate;
-public class Account {
+public abstract class Account {
     protected double balance; //saldo
     private LocalDate openDate; //se io lo metto = null il compilatore mi dice che è rindondante perchè è gia null
     //private String client;   //stringa del clinrte
@@ -50,20 +50,21 @@ public class Account {
         this.client = client;
     }
 
-    public double deposit(double amount){  //amount è il deposito
+    public abstract double deposit(double amount); //metodo astratto di classe astratta
+    /*{  //amount è il deposito
         //amount *=100;
         balance += amount;  //sommiamo a balance l'amount
         return balance/100;   //sto cambiando l'unità di misura da euro a centesimi di euro
 
-    }
-
+    }*/
+    /*
     //metodo overloading per avere classi con lo stesso nome ma parametri diversi
     public double deposit(double amount, double extra){  //amount è il deposito
         balance += amount; //sommiamo a balance l'amount
         balance += extra/2;
         return balance;
 
-    }
+    }*/
 
     public double withDraw(double amount){
         balance -= amount; //sottraggo

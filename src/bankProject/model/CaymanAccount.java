@@ -14,7 +14,13 @@ public class CaymanAccount extends Account { //figlia di account
         deposit(1000);
         return 0;
     }
+    @Override //annotazione
+    public double deposit(double amount){ //Metodo Overide
+        balance = amount * 1.1;
+        return balance;
+    }
 }
+
 
 
 
